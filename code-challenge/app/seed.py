@@ -8,6 +8,7 @@ from flask import Flask
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
 app.app_context().push()
 
@@ -37,7 +38,7 @@ strengths = ["Strong", "Weak", "Average"]
 
 # Seed the HeroPower table
 for hero in heroes:
-  for _ in range(random.randint(1, 3)):
+  for n in range(random.randint(1, 3)):
     power = random.choice([power1, power2, power3])
     strength = random.choice(strengths)
     hero_power = HeroPower(hero=hero, power=power, strength=strength, created_at=datetime.utcnow(), updated_at=datetime.utcnow())
@@ -49,4 +50,4 @@ db.session.commit()
 print("🦸‍♀️ Done seeding!")
 
 if __name__ == '__main__':
-    app.run(port=5555)
+  app.run(port=5555)

@@ -17,6 +17,9 @@ db.init_app(app)
 def home():
     return ''
 
-
+class Heroes(Resource):
+    def getitems(self):
+        all_heroes = Heroes.query.all()
+        hero_li =
 if __name__ == '__main__':
     app.run(port=5555)
