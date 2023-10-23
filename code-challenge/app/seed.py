@@ -19,19 +19,19 @@ power3 = Power(name="Superhuman Senses", description="Enhances senses to a super
 
 # Generate heroes data
 heroes_data = [
-  {"name": "Kamala Khan", "supername": "Ms. Marvel"},
-  {"name": "Doreen Green", "supername": "Squirrel Girl"},
-  {"name": "Gwen Stacy", "supername": "Spider-Gwen"},
-  {"name": "Janet Van Dyne", "supername": "The Wasp"},
-  {"name": "Wanda Maximoff", "supername": "Scarlet Witch"},
-  {"name": "Carol Danvers", "supername": "Captain Marvel"},
-  {"name": "Jean Grey", "supername": "Dark Phoenix"},
-  {"name": "Ororo Munroe", "supername": "Storm"},
-  {"name": "Kitty Pryde", "supername": "Shadowcat"},
-  {"name": "Elektra Natchios", "supername": "Elektra"}
+  {"name": "Kamala Khan", "super_name": "Ms. Marvel"},
+  {"name": "Doreen Green", "super_name": "Squirrel Girl"},
+  {"name": "Gwen Stacy", "super_name": "Spider-Gwen"},
+  {"name": "Janet Van Dyne", "super_name": "The Wasp"},
+  {"name": "Wanda Maximoff", "super_name": "Scarlet Witch"},
+  {"name": "Carol Danvers", "super_name": "Captain Marvel"},
+  {"name": "Jean Grey", "super_name": "Dark Phoenix"},
+  {"name": "Ororo Munroe", "super_name": "Storm"},
+  {"name": "Kitty Pryde", "super_name": "Shadowcat"},
+  {"name": "Elektra Natchios", "super_name": "Elektra"}
 ]
 
-heroes = [Hero(name=data["name"], supername=data["supername"], created_at=datetime.utcnow(), updated_at=datetime.utcnow()) for data in heroes_data]
+heroes = [Hero(name=data["name"], super_name=data["super_name"], created_at=datetime.utcnow(), updated_at=datetime.utcnow()) for data in heroes_data]
 
 # Generate hero powers data
 strengths = ["Strong", "Weak", "Average"]
