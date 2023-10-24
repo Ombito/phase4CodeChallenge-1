@@ -37,7 +37,6 @@ def get_hero(hero_id):
             "id": hero.id,
             "name": hero.name,
             "super_name": hero.super_name,
-            "powers": [{"id": power.id, "name": power.name, "description": power.description} for power in hero.powers]
         }
         return jsonify(hero_data)
     else:
@@ -111,5 +110,39 @@ def create_hero_power():
     }
     return jsonify(hero_data), 201
 
+#     # patch 
+# # Sample data to simulate a database of Powers
+# powers = [
+#     {"id": 1, "name": "super strength", "description": "Original description"},
+#     {"id": 2, "name": "telekinesis", "description": "Original description"},
+# ]
+
+# @app.route('/update_power/<int:power_id>', methods=['PUT'])
+# def update_power(power_id):
+#     # Find the power with the given ID (if it exists)
+#     power = next((p for p in powers if p["id"] == power_id), None)
+
+#     if not power:
+#         # Power not found
+#         return jsonify({"error": "Power not found"}), 404
+
+#     # Get the request data
+#     data = request.get_json()
+
+#     if "description" not in data:
+#         return jsonify({"error": "Missing 'description' in the request data"}), 400
+
+#     # Update the description if provided
+#     new_description = data["description"]
+#     power["description"] = new_description
+
+#     # You can add validation logic here if nehero
+#     # Return the updated power
+#     return jsonify(power), 200
+
+    
+
+
 if __name__ == '__main__':
     app.run(port=5555)
+    app.run(debug=True)

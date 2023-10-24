@@ -47,7 +47,7 @@ for hero in heroes:
 # Commit the changes to the database
 db.session.commit()
 
-print("🦸‍♀️ Done seeding!")
+print("Done seeding!")
 
 if __name__ == '__main__':
   app.run(port=5555)
