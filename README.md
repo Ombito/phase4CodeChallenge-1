@@ -224,3 +224,9 @@ If the `HeroPower` is **not** created successfully, the API returns an appropria
   "errors": ["validation errors"]
 }
 ```
+
+## Contributing
+I welcome contributions from the community. If you have any feature requests, bug reports, or other contributions, please feel free to open an issue or submit a pull request. I appreciate your help in making this system even better.
+
+## License
+This project is licensed under the [MIT License]().
